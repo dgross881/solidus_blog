@@ -1,8 +1,8 @@
 module SpreeBloggingSpree
   class Engine < Rails::Engine
-    require 'spree/core'
+    require 'solidus/core'
     isolate_namespace Spree
-    engine_name 'spree_blogging_spree'
+    engine_name 'solidus_blog'
 
     # use rspec for tests
     config.generators do |g|
