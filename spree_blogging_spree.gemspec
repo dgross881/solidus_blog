@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
 
   solidus_version = [">= 1.1.0.alpha", "< 2"]
 
-  s.add_dependency "solidus_core", solidus_version
+  s.add_dependency "solidus", solidus_version
   s.add_dependency 'acts-as-taggable-on', '~> 3.5.0'
 
   s.add_development_dependency 'capybara', '~> 2.2.1'
