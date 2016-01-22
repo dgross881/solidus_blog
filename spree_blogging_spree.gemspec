@@ -16,8 +16,10 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_core', '~> 3.0.1'
-  s.add_dependency 'acts-as-taggable-on', '~> 3.4.0'
+  solidus_version = [">= 1.1.0.alpha", "< 2"]
+
+  s.add_dependency "solidus_core", solidus_version
+  s.add_dependency 'acts-as-taggable-on', '~> 3.5.0'
 
   s.add_development_dependency 'capybara', '~> 2.2.1'
   s.add_development_dependency 'coffee-rails', '~> 4.0.0'
@@ -30,5 +32,4 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'simplecov', '~> 0.7.1'
   s.add_development_dependency 'sqlite3'
   s.add_development_dependency 'launchy'
-
 end
