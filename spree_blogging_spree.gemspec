@@ -1,14 +1,14 @@
 # encoding: UTF-8
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-  s.name        = 'spree_blogging_spree'
+  s.name        = 'solidus_blog'
   s.version     = '2.3.0'
-  s.summary     = 'BloggingSpree: A Spree blogging solution'
+  s.summary     = 'A Solidus blogging solution'
   s.description = 'A basic blogging solution for use with the Spree E-Commerce platform.'
-  s.required_ruby_version = '>= 1.9.3'
+  s.required_ruby_version = '>= 2.1.0'
 
-  s.author    = 'Stefan Senk, Sumit Sharma'
-  s.email     = 'forever.sumitsharma@gmail.com'
+  s.author    = 'Stefan Senk, Sumit Sharma, David Gross'
+  s.email     = 'forever.sumitsharma@gmail.com, david.w.gross87@gmail.com'
   # s.homepage  = 'http://www.spreecommerce.com'
 
   #s.files       = `git ls-files`.split("\n")
