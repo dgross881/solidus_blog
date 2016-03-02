@@ -20,12 +20,12 @@ class Spree::BlogEntry < Spree::Base
   has_one :blog_entry_image, as: :viewable, dependent: :destroy, class_name: 'Spree::BlogEntryImage'
   accepts_nested_attributes_for :blog_entry_image, reject_if: :all_blank
 
+  def published?
+    published_at <= Time.current unless published_at.blank?
+  end
+
   def entry_summary(chars=200)
-    if summary.blank?
-      "#{body[0...chars]}..."
-    else
-      summary
-    end
+    summary.blank? ? "#{body[0...chars]}..." : summary
   end
 
   def self.by_date(date, period = nil)
@@ -82,5 +82,4 @@ class Spree::BlogEntry < Spree::Base
     # nicEdit field contains "<br>" when blank
     errors.add(:body, "can't be blank") if body =~ /^<br>$/
   end
-
 end
