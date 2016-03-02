@@ -6,9 +6,10 @@ class Spree::BlogEntry < Spree::Base
   validates_presence_of :title
   validates_presence_of :body
 
-  default_scope { order('published_at DESC').where('spree_blog_entries.published_at <= ?', Time.current) }
+  default_scope { order('published_at DESC') }
   scope :visible, -> { where visible: true }
   scope :recent, lambda{ |max=5| visible.limit(max) }
+  scope :published, -> { where('spree_blog_entries.published_at <= ?', Time.current) }
 
   if Spree.user_class
     belongs_to :author, class_name: Spree.user_class.to_s
